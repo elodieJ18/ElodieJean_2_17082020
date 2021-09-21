@@ -38,7 +38,7 @@ body {
 }
 
 .navigation-signup a {
-  color: dodgerblue;
+  color: #0065fc;
 }
 
 .navigation-menu {
@@ -62,13 +62,13 @@ body {
 
 .navigation-menu:hover,
 .navigation-menu:active {
-  border-top: 3px solid dodgerblue;
+  border-top: 3px solid #0065fc;
   margin-top: 0;
 }
 
 .navigation-menu:hover a,
 .navigation-menu:active a {
-  color: dodgerblue;
+  color: #0065fc;
 }
 /*Header*/
 .enter-search {
@@ -88,7 +88,7 @@ body {
 }
 
 .btn-map button {
-  background-color: #f4f1f1;
+  background-color: #f2f2f2;
   border: none;
   height: 40px;
   width: 42px;
@@ -104,12 +104,15 @@ input {
 }
 
 .btn-search button {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #0065fc;
   border: none;
   height: 40px;
   width: 120px;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.btn-search button a {
+  color: white;
 }
 
 .filter-search {
@@ -126,12 +129,12 @@ input {
   justify-content: space-around;
   cursor: pointer;
   box-shadow: 0 0 0 1px white;
-  border: 2px solid rgb(223, 235, 248);
+  border: 2px solid #deebff;
 }
 
 .filter-element--icon {
-  background-color: rgb(223, 235, 248);
-  color: dodgerblue;
+  background-color: #deebff;
+  color: #0065fc;
   border-radius: 100%;
   height: 3em;
   width: 3em;
@@ -153,14 +156,14 @@ input {
 }
 
 .btn-filter {
-  border: solid 2px rgb(223, 235, 248);
+  border: solid 2px #f2f2f2;
   border-radius: 1.5rem 1.5rem 1.5rem 1.5em;
   margin-right: 20px;
 }
 
 .btn-filter i {
-  color: dodgerblue;
-  background-color: rgb(223, 235, 248);
+  color: #0065fc;
+  background-color: #deebff;
   border-radius: 50%;
   padding: 10px;
   margin-right: 9px;
@@ -172,7 +175,7 @@ input {
 .cercle {
   height: 10px;
   width: 10px;
-  border: 2px solid #f4f1f1;
+  border: 2px solid #f2f2f2;
   border-radius: 50%;
 }
 
@@ -181,7 +184,7 @@ input {
   text-align: center;
   font-size: 12px;
   margin-top: 11px;
-  color: dodgerblue;
+  color: #0065fc;
   margin-right: 5px;
 }
 
@@ -196,7 +199,7 @@ input {
 }
 
 .accomodation-container-results {
-  background-color: rgb(245, 244, 244);
+  background-color: #f2f2f2;
   border-radius: 5%;
   padding: 30px;
 }
@@ -215,11 +218,11 @@ h4 {
   margin-top: 0;
 }
 .starsrate .fas {
-  color: dodgerblue;
+  color: #0065fc;
 }
 
 .starsrate .false {
-  color: rgb(180, 184, 187);
+  color: #f2f2f2;
 }
 
 /*block1*/
@@ -243,6 +246,7 @@ h4 {
   border-radius: 7%;
   padding: 3px;
   box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+  width: 93%;
 }
 
 .accomodation-container-results-grid--element---image-container {
@@ -251,10 +255,15 @@ h4 {
 }
 
 .accomodation-container-results-grid--element---image {
-  border-radius: 1rem;
-  text-align: center;
+  object-fit: cover;
+  object-position: center;
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  text-align: center;
 }
 
 .accomodation-container-results-grid--element---description {
@@ -263,10 +272,10 @@ h4 {
   margin-bottom: 10px;
 }
 
-/*block2*/
+/*populaire*/
 
 .accomodation-container-populars {
-  background-color: rgb(245, 244, 244);
+  background-color: #f2f2f2;
   border-radius: 2rem;
   padding: 30px;
 }
@@ -281,23 +290,22 @@ h4 {
 .accomodation-container-populars-grid--element {
   background-color: rgb(255, 254, 254);
   gap: 12px;
-  border-radius: 1rem;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-bottom: 1px;
+  border-radius: 1.5rem;
+  padding: 3px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-shadow: 0px 3px 12px 0px rgb(196 196 196);
 }
 
-.accomodation-container-populars-grid--element---image-container {
-  width: 138px;
-  overflow: hidden;
-}
 .accomodation-container-populars-grid--element---image {
-  width: auto;
-  height: 142px;
-  border-radius: 8% 0% 0% 8%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
   text-align: center;
 }
 
@@ -405,4 +413,138 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 60px;
+}
+
+@media (max-width: 820px) {
+  #hosting {
+    margin-left: 0px;
+    width: 100%;
+    font-family: 'raleway';
+  }
+
+  .bloc,
+  #activites {
+    margin-left: 9px;
+    width: 100%;
+    font-family: 'raleway';
+  }
+
+  .navigation-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      'menu1 menu4'
+      'menu2 menu3';
+
+    width: 100%;
+  }
+  .menu1 {
+    grid-area: menu1;
+  }
+  .menu2 {
+    grid-area: menu2;
+  }
+  .menu3 {
+    grid-area: menu3;
+  }
+  .menu4 {
+    grid-area: menu4;
+  }
+
+  .filter-search {
+    display: flex;
+    grid-gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 97%;
+  }
+
+  .accomodation-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'accomodation-container-populars'
+      'accomodation-container';
+    margin-top: 38px;
+  }
+  .accomodation-container-populars {
+    grid-area: accomodation-container-populars;
+    border-radius: 0px;
+    width: 89%;
+  }
+
+  .accomodation-container-populars-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 2;
+    grid-template-columns: 91%;
+    gap: 28px;
+  }
+
+  .accomodation-container {
+    grid-area: accomodation-container;
+  }
+
+  .accomodation-container-results {
+    background-color: unset;
+    border-radius: 5%;
+    padding: 30px;
+  }
+
+  .accomodation-container-results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row: 2;
+    gap: 28px;
+  }
+
+  .activities-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: none;
+    margin-bottom: 75px;
+    column-gap: 0rem;
+    row-gap: 0rem;
+    height: 413px;
+  }
+
+  .activities-container-element {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 72%;
+    box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+    border-radius: 1.5rem;
+    background-color: white;
+    color: black;
+    height: 58%;
+  }
+}
+
+@media (max-width: 375px) {
+  .accomodation-container-populars-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 2;
+    grid-template-columns: 90%;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 320px) {
+  .accomodation-container-populars-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 2;
+    grid-template-columns: 100%;
+    gap: 28px;
+  }
+
+  .accomodation-container-populars {
+    grid-area: accomodation-container-populars;
+    border-radius: 0px;
+    width: 103%;
+  }
 }
