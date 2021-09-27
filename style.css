@@ -415,7 +415,21 @@ footer {
   margin-left: 60px;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 720px) {
+  .accomodation-container-populars-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 2;
+    grid-template-columns: 100%;
+    gap: 28px;
+  }
+
+  .accomodation-container-populars {
+    grid-area: accomodation-container-populars;
+    border-radius: 0px;
+    width: 111%;
+  }
+
   #hosting {
     margin-left: 0px;
     width: 100%;
@@ -439,6 +453,7 @@ footer {
 
     width: 100%;
   }
+
   .menu1 {
     grid-area: menu1;
   }
@@ -468,28 +483,12 @@ footer {
       'accomodation-container';
     margin-top: 38px;
   }
-  .accomodation-container-populars {
-    grid-area: accomodation-container-populars;
-    border-radius: 0px;
-    width: 89%;
-  }
-
-  .accomodation-container-populars-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row: 2;
-    grid-template-columns: 91%;
-    gap: 28px;
-  }
-
-  .accomodation-container {
-    grid-area: accomodation-container;
-  }
 
   .accomodation-container-results {
     background-color: unset;
     border-radius: 5%;
     padding: 30px;
+    width: 114%;
   }
 
   .accomodation-container-results-grid {
@@ -504,7 +503,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: none;
     margin-bottom: 75px;
     column-gap: 0rem;
     row-gap: 0rem;
@@ -521,30 +519,20 @@ footer {
     color: black;
     height: 58%;
   }
-}
 
-@media (max-width: 375px) {
-  .accomodation-container-populars-grid {
+  .activities-container {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row: 2;
-    grid-template-columns: 90%;
-    gap: 28px;
-  }
-}
-
-@media (max-width: 320px) {
-  .accomodation-container-populars-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row: 2;
-    grid-template-columns: 100%;
-    gap: 28px;
-  }
-
-  .accomodation-container-populars {
-    grid-area: accomodation-container-populars;
-    border-radius: 0px;
-    width: 103%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'card1'
+      'card2'
+      'card3'
+      'card4'
+      'card5'
+      'card6';
+    row-gap: 2rem;
+    column-gap: 2rem;
+    height: 485px;
+    margin-bottom: 75px;
   }
 }
