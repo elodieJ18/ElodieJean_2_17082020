@@ -12,10 +12,14 @@ body {
 }
 
 .bloc,
-#hosting,
+#hosting {
+  padding: 30px;
+  font-family: 'raleway';
+}
+
 #activities {
-  margin-left: 56px;
-  width: 92%;
+  padding: 17px;
+  margin-left: 26px;
   font-family: 'raleway';
 }
 
@@ -109,6 +113,10 @@ input {
   height: 40px;
   width: 120px;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.btn-search-mobile {
+  display: none;
 }
 
 .btn-search button a {
@@ -295,6 +303,7 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+  height: 150px;
 }
 
 .accomodation-container-populars-grid--element---image {
@@ -416,6 +425,34 @@ footer {
 }
 
 @media (max-width: 720px) {
+  body {
+    width: auto;
+    height: auto;
+  }
+
+  .bar-search h1 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+  }
+
+  .bar-search {
+    padding: 20px;
+  }
+
+  .navigation-menu {
+    display: flex;
+    justify-content: center;
+    padding: 3em 0 3em 0;
+    border-bottom: 2px solid rgb(255, 254, 254);
+  }
+
+  .navigation-menu:hover {
+    border-bottom: 3px solid #0065fc;
+    margin-bottom: 0;
+    border-top: none;
+  }
+
   .accomodation-container-populars-grid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -427,20 +464,54 @@ footer {
   .accomodation-container-populars {
     grid-area: accomodation-container-populars;
     border-radius: 0px;
-    width: 111%;
+    background-color: #f2f2f2;
+  }
+
+  .accomodation-container-populars-grid--element---description {
+    margin-top: 10px;
+    padding-right: 0px;
   }
 
   #hosting {
     margin-left: 0px;
-    width: 100%;
+    padding: 0px;
     font-family: 'raleway';
   }
 
-  .bloc,
-  #activites {
-    margin-left: 9px;
-    width: 100%;
+  /*
+  .bloc, #hosting {
+    padding: 0px;
     font-family: 'raleway';
+  } 
+  */
+
+  .bloc {
+    font-family: 'raleway';
+    padding: 0px;
+  }
+
+  .btn-search {
+    display: none;
+  }
+
+  .btn-search-mobile {
+    display: block;
+  }
+
+  .btn-search-mobile button {
+    background-color: #0065fc;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  .btn-search-mobile button a {
+    color: white;
+  }
+
+  input {
+    border: 2px solid #f2f2f2;
   }
 
   .navigation-bar {
@@ -450,8 +521,6 @@ footer {
     grid-template-areas:
       'menu1 menu4'
       'menu2 menu3';
-
-    width: 100%;
   }
 
   .menu1 {
@@ -472,7 +541,12 @@ footer {
     grid-gap: 10px;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 97%;
+  }
+
+  .accomodation-container-results {
+    background-color: #f2f2f2;
+    border-radius: 5%;
+    padding: 18px;
   }
 
   .accomodation-container {
@@ -487,8 +561,6 @@ footer {
   .accomodation-container-results {
     background-color: unset;
     border-radius: 5%;
-    padding: 30px;
-    width: 114%;
   }
 
   .accomodation-container-results-grid {
@@ -499,30 +571,36 @@ footer {
     gap: 28px;
   }
 
-  .activities-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    margin-bottom: 75px;
-    column-gap: 0rem;
-    row-gap: 0rem;
-    height: 413px;
+  #activities {
+    padding: 0px;
+    margin-left: 0px;
+    font-family: 'raleway';
+    height: 317vh;
+    padding: 23px;
   }
 
   .activities-container-element {
     display: grid;
     grid-template-rows: 1fr;
-    width: 72%;
     box-shadow: 0px 3px 12px 0px rgb(196 196 196);
     border-radius: 1.5rem;
     background-color: white;
     color: black;
-    height: 58%;
+  }
+
+  .accomodation-container-results-grid--element {
+    /* background-color: rgb(255, 254, 254); */
+    display: grid;
+    grid-template-rows: 1fr;
+    border-radius: 7%;
+    /* padding: 3px; */
+    box-shadow: 0px 3px 12px 0px rgb(196 196 196);
   }
 
   .activities-container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
       'card1'
       'card2'
@@ -531,8 +609,14 @@ footer {
       'card5'
       'card6';
     row-gap: 2rem;
-    column-gap: 2rem;
+    column-gap: 0rem;
     height: 485px;
     margin-bottom: 75px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 0px;
   }
 }
