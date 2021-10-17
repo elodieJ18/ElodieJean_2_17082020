@@ -10,10 +10,24 @@ body {
   font-family: 'raleway';
   margin: 0;
 }
+p,
+h1,
+h2 {
+  font-family: 'Raleway', Sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  padding-bottom: 15px;
+  font-family: 'Raleway', Sans-serif;
+  font-weight: 450;
+}
 
 .bloc,
 #hosting {
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   padding-left: 30px;
   padding-right: 30px;
   font-family: 'raleway';
@@ -116,6 +130,14 @@ input {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
+.btn-search button:hover {
+  background-color: #023888;
+  border: none;
+  height: 40px;
+  width: 120px;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
 .btn-search-mobile {
   display: none;
 }
@@ -141,6 +163,16 @@ input {
   border: 2px solid #deebff;
 }
 
+.filter-element:hover {
+  display: flex;
+  border-radius: 1.5em;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #0065fc;
+  border: 2px solid #deebff;
+}
+
 .filter-element--icon {
   background-color: #deebff;
   color: #0065fc;
@@ -151,7 +183,7 @@ input {
   align-items: center;
   justify-content: center;
   position: relative;
-  right: 3px;
+  right: 2px;
 }
 
 .filter-element--title {
@@ -180,6 +212,8 @@ input {
 
 .info-city {
   display: flex;
+  align-items: center;
+  padding-top: 17px;
 }
 .cercle {
   height: 10px;
@@ -192,7 +226,7 @@ input {
   padding: 6px;
   text-align: center;
   font-size: 12px;
-  margin-top: 11px;
+
   color: #0065fc;
   margin-right: 5px;
 }
@@ -252,7 +286,7 @@ h4 {
   background-color: rgb(255, 254, 254);
   display: grid;
   grid-template-rows: 1fr;
-  border-radius: 7%;
+  border-radius: 1.2rem;
   padding: 3px;
   box-shadow: 0px 3px 12px 0px rgb(196 196 196);
   width: 93%;
@@ -270,8 +304,8 @@ h4 {
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   text-align: center;
 }
 
@@ -310,7 +344,7 @@ h4 {
 .accomodation-container-populars-grid--element {
   background-color: rgb(255, 254, 254);
   gap: 12px;
-  border-radius: 1.5rem;
+  border-radius: 1.7rem;
   padding: 3px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -324,8 +358,8 @@ h4 {
   width: 100%;
   max-width: 100%;
   max-height: 100%;
-  border-top-left-radius: 1.5em;
-  border-bottom-left-radius: 1.5em;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
   text-align: center;
 }
 
@@ -348,13 +382,13 @@ h4 {
 .activities-container {
   display: grid;
   grid-template-columns: auto 25% auto 25%;
-  grid-template-rows: auto 50%;
+  grid-template-rows: 50% 50%;
   grid-template-areas:
     'card1 card2 card4 card5'
     'card1 card3 card4 card6';
   row-gap: 2rem;
   column-gap: 2rem;
-  margin-bottom: 75px;
+  margin-bottom: 60px;
 }
 .activities-container-element {
   display: grid;
@@ -465,6 +499,20 @@ footer {
   #activities {
     font-family: 'raleway';
     padding: 23px;
+  }
+
+  .activities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'card1 card2'
+      'card1 card3'
+      'card4 card5'
+      'card4 card6';
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -598,6 +646,21 @@ footer {
     flex-wrap: wrap;
   }
 
+  .filter-search h3 {
+    padding-right: 70px;
+    margin-bottom: 0px;
+  }
+
+  .filter-element--title {
+    margin: 0 0.5rem 0 0.5rem;
+    font-weight: 800;
+    font-size: 13px;
+  }
+
+  .info-city span {
+    font-size: 13px;
+  }
+
   .accomodation-container-results {
     background-color: #f2f2f2;
     border-radius: 5%;
@@ -661,6 +724,10 @@ footer {
     border-radius: 7%;
     /* padding: 3px; */
     box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+  }
+
+  .accomodation-container-populars-grid--element---description p {
+    margin-bottom: 30px;
   }
 
   .activities-container {
