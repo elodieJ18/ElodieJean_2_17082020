@@ -7,10 +7,11 @@
   font-family: 'Raleway', Sans-serif;
 }
 
-/* p {
-  padding-bottom: 15px;
-  font-weight: 450;
-} */
+body {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
 
 .bloc,
 #hosting {
@@ -454,8 +455,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body {
-    width: auto;
+  .info-city {
+    padding-bottom: 10px;
   }
   .accomodation-container {
     display: grid;
@@ -481,7 +482,8 @@ footer {
     justify-content: center;
     padding: 3em 0 3em 0;
     border-top: 2px solid white;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   #activities {
@@ -513,11 +515,6 @@ footer {
 
   .navigation-logo {
     padding-left: 15px;
-  }
-
-  body {
-    width: auto;
-    height: auto;
   }
 
   .bar-search h1 {
