@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   src: url(./assets/Raleway/static/Raleway-Medium.ttf);
 }
 
 * {
-  font-family: 'Raleway', Sans-serif;
+  font-family: "Raleway", Sans-serif;
 }
 
 body {
@@ -106,8 +106,18 @@ input {
   color: black;
 }
 
+input:focus {
+  border: none;
+  outline: none;
+  border: 1px solid #f2f2f2 !important;
+}
+input {
+  border: 1px solid #f2f2f2;
+}
+
 .btn-search button {
   background-color: #0065fc;
+  color: white;
   border: none;
   height: 40px;
   width: 120px;
@@ -360,21 +370,18 @@ h4 {
 }
 
 /*activités*/
-.activites-container {
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
 
 .activities-container {
   display: grid;
-  grid-template-columns: auto 25% auto 25%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: auto 20rem auto 22rem;
+  grid-template-rows: 14rem 14rem;
   grid-template-areas:
-    'card1 card2 card4 card5'
-    'card1 card3 card4 card6';
+    "card1 card2 card4 card5"
+    "card1 card3 card4 card6";
   row-gap: 2rem;
   column-gap: 2rem;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
+  margin-top: 50px;
 }
 .activities-container-element {
   display: grid;
@@ -495,10 +502,10 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-      'card1 card2'
-      'card1 card3'
-      'card4 card5'
-      'card4 card6';
+      "card1 card2"
+      "card1 card3"
+      "card4 card5"
+      "card4 card6";
     row-gap: 2rem;
     column-gap: 2rem;
     margin-bottom: 10px;
@@ -576,6 +583,10 @@ footer {
     display: block;
   }
 
+  .btn-search-mobile i {
+    color: white;
+  }
+
   .btn-search-mobile button {
     background-color: #0065fc;
     border: none;
@@ -588,17 +599,13 @@ footer {
     color: white;
   }
 
-  input {
-    border: 2px solid #f2f2f2;
-  }
-
   .navigation-bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50% 50%;
     grid-template-areas:
-      'menu1 menu4'
-      'menu2 menu3';
+      "menu1 menu4"
+      "menu2 menu3";
   }
 
   .menu1 {
@@ -646,8 +653,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      'accomodation-container-populars'
-      'accomodation-container';
+      "accomodation-container-populars"
+      "accomodation-container";
     margin-top: 0px;
   }
 
@@ -709,12 +716,12 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-      'card1'
-      'card2'
-      'card3'
-      'card4'
-      'card5'
-      'card6';
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6";
     row-gap: 2rem;
     column-gap: 0rem;
 
