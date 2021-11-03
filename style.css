@@ -454,7 +454,7 @@ h3 {
   grid-area: card6;
 }
 
-.activities-container-element > h4 {
+.activities-container-element > h3 {
   display: flex;
   align-items: center;
   padding-left: 1.5em;
@@ -536,6 +536,9 @@ footer {
     row-gap: 2rem;
     column-gap: 2rem;
     margin-bottom: 10px;
+  }
+  .card3 {
+    margin-top: 0%;
   }
 }
 
@@ -724,6 +727,13 @@ footer {
     font-size: 13px;
   }
 
+  .filter-element--icon {
+    height: 2em;
+    width: 3em;
+  }
+  .filter-element {
+    width: auto;
+  }
   .info-city span {
     font-size: 13px;
   }
@@ -777,7 +787,7 @@ footer {
     color: black;
   }
 
-  .activities-container-element > h4 {
+  .activities-container-element > h3 {
     padding-left: 1.5em;
     padding-top: 1em;
     padding-bottom: 1em;
